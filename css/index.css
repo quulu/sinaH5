@@ -1,0 +1,221 @@
+/* 
+知识点
+1、header不用给宽度  也是100%  因为是块级元素
+2、logo的img  水平居中
+    - 不转化为block的情况： 在父元素设置text-align: center;
+    - 转化为block的情况： 
+       在自己本身设置 display:block; margin:0 auto;
+3、logo的img 垂直居中
+    - 不转化为block的情况：
+    - 转化为block的情况：
+        + (0.8rem-0.37rem)/2 设置margin-top
+        但是margin-top有传递问题，设置img的margin-top, 但是传递给了父元素，父元素会往下掉
+        解决办法：父元素overflow:hidden;
+
+        + position: 
+            - 
+            - 
+            - .son{position: absolute;top: 0;left: 0;bottom: 0;right: 0;}
+        + flex:
+            - 父元素 display:flex;
+                    align-items: center;
+                    justify-content: center;
+
+*/
+.ifeng-hd{
+    /* 不给宽度 也是100% 因为是块级 */
+    height: 0.8rem;
+    /* text-align: center; */
+    background-color: white;
+    /* overflow: hidden; */
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    position: relative;
+}
+.ifeng-hd img {
+    display: block;
+    width: 1.95rem;
+    height: 0.37rem;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* nav */
+.ifeng-nav {
+    /* background-color: yellow; */
+    height: .8rem;
+    line-height: .8rem;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.ifeng-nav a{
+    color: #727272;
+    font-size: .36rem;
+    text-align: center;
+    /* 如果平分的话  设置flex:1 */
+    /* flex: 1; */
+    padding:0  .28rem; 
+}
+
+/* 当前选中的模块 */
+.ifeng-nav .current {
+    color: #F44343;
+}
+
+/* 轮播图的img */
+.swiper-slide {
+    position: relative;
+}
+.swiper-slide img {
+    width: 100%;
+}
+.swiper-pagination{
+    text-align: right;
+    font-size: .2rem;
+    color: white;
+}
+.swiper-pagination-current {
+    color: #F44343;
+    font-size: .36rem;
+}
+
+/* 轮播图文字 */
+.swiper-slide-text{
+    /* display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    height: 1.173333rem;
+    line-height: .64rem;
+    margin: .853333rem .346667rem .266667rem;
+    overflow: hidden;
+    text-overflow: ellipsis; */
+    width: 100%;
+    height: .8rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    /* background-color: violet; */
+    background:(linear-gradient(0deg,rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8),rgba(0, 0, 0, -0.04)));
+}
+.swiper-slide-text a{
+    display: block;
+    height: 100%;
+    line-height: 100%;
+    /* line-height: .64rem;
+    font-family: PingFangSC;
+    font-weight: bolder;
+     */
+    font-size: .35rem;
+    padding: 0 .7rem 0 .1rem;
+    color: #fff;
+    word-break: break-all;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+/* 内容模块 */
+.ifeng-sec{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    border-bottom:1px solid #e4e4e4;
+    /* padding: .24rem .3rem; */
+    padding: .24rem .3rem;
+}
+.ifeng-sec .pic{
+    width: 1.12rem;
+    /* height: 0.75rem; */
+    height: 1rem;
+    /* margin: 0 .32rem 0 0; */
+    margin-right: .32rem;
+    
+}
+.ifeng-sec .pic img{
+    width: 100%;
+    height: 100%;
+    border-radius: .1rem;
+}
+.ifeng-sec .txt{
+    /* 100% - 1.12rem 剩下的都是文字 */
+    flex: 1;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+
+    /* 竖直 两端对齐 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: justify;
+}
+
+.ifeng-sec .txt h2{
+    /* 文字超出2行出现省略号 */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-clamp: 2;
+    word-break: break-all;
+    overflow: hidden;
+}
+
+.ifeng-sec .txt p{
+    /* 控制子元素 - 水平排列 - 两端对齐 */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 字体图标 
+第一步：导入字体图标的路径 - font-face(需改名称)
+*/
+@font-face{
+    
+    font-family: 'SinaHomeFont';
+    src: url('../font/SinaHomeFont.eot'); /* IE9 Compat Modes */
+    src: url('../font/SinaHomeFont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../font/SinaHomeFont.woff') format('woff'), /* Modern Browsers */
+    url('../font/SinaHomeFont.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('../font/SinaHomeFont.svg#SinaHomeFont') format('svg'); /* Legacy iOS */
+}
+
+/* 第二步： 引入公用的样式类名 */
+.icon-font {
+    font-family: 'SinaHomeFont';
+    font-weight:normal;
+    font-style:normal;
+    
+    /*解决字体图标锯齿和不清晰的情况*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+/* 第三步： 编码 */
+.icon-comment::before {
+    content: '\E90D';
+}
+
+/* 调bug - 出现口的形状 而不是小图标
+- 路径的问题： index.css  - css文件夹中 ../
+                        - font文件夹
+- 路径没问题，公用的样式类名 icon-font 一定要写在标签class=""中  
+
+路径三种情况：
+平级关系 - 直接写文件的名称
+上级关系 - ../
+下级关系 - / 
+
+*/
