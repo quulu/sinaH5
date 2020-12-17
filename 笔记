@@ -47,6 +47,12 @@ https://quulu.github.io/sinaH5/
 2. 我们源代码上传到这个地址对应的仓库下面
 - 登录用户名邮箱 - github账号同步
 - clone a repository 克隆一个仓库/  File -> clone a repository
+- 把我们的源代码复制粘贴 放在我们的仓库文件夹中
+- commit to main 提交 - 文件为空
+- push to origin 推送到远程仓库
+- https://quulu.github.io/sinaH5/index.html  / xxx.html
 
 
 3. 我们可以扫一扫直接手机访问我们的项目
+- https://quulu.github.io/sinaH5/index.html 
+- 生成一个二维码  草料二维码 
