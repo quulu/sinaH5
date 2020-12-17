@@ -1,0 +1,58 @@
+rem (root element)  根元素  html
+- 根元素的字体大小  html{font-size:16px;}
+- 1rem = 16px  默认
+- 方便计算 减少误差  1rem = 100px  
+- 动态获取根元素的字体大小 rem  - JS
+
+vscode插件
+- cssrem
+- browser Preview 
+
+750   320    375 
+100    ?      ? 
+
+px   写死  pc端
+rem  移动端(H5)
+%    全屏 100%
+
+==========================
+媒体查询: 
+iphone4  box 10*10  css
+iphone6  box 20*20  css 
+
+
+HTML5新增的标签(更加语义化)
+- header 头部标签   <div class="header"></div>
+- nav 导航
+- section  == div
+- figure  包裹图片img 
+- aside  
+
+========================================
+1. 借助github - 生成一个在线可访问的地址  -  域名地址
+- New repository 新建一个仓库
+- Repository name - 我们自己去命名 - 英文名称  sinaH5
+- Description 中文、英文都可以
+- Create repository 创建仓库
+- 右上角 settings  打开settings  一直往下， 有Github Pages
+- Github Pages  -> Choose a theme 选择一个主题/皮肤
+- 选择一个theme（默认的theme即可） - select theme 
+- select完成后， 往下划， -》 commit changes 
+- commit changes完成后， 地址就有了。 
+- 再点击 settings, 划到下面 Github pages, 就会有一个地址了。
+https://quulu.github.io/sinaH5/
+
+========================================
+
+2. 我们源代码上传到这个地址对应的仓库下面
+- 登录用户名邮箱 - github账号同步
+- clone a repository 克隆一个仓库/  File -> clone a repository
+- 把我们的源代码复制粘贴 放在我们的仓库文件夹中
+- commit to main 提交 - 文件为空
+- push to origin 推送到远程仓库
+- https://quulu.github.io/sinaH5/index.html  / xxx.html
+
+
+3. 我们可以扫一扫直接手机访问我们的项目
+- https://quulu.github.io/sinaH5/index.html 
+- 生成一个二维码  草料二维码 

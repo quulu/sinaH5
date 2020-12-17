@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新闻H5首页</title>
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    
+</head>
+<body>
+    <!-- 可访问的地址 -->
+    
+    <!-- logo -->
+    <header class="ifeng-hd">
+        <a href="#">
+            <img src="logo.jpg" alt="">
+        </a>
+    </header>
+
+    <!-- nav -->
+    <nav class="ifeng-nav">
+        <a class="current" href="#">头条</a>
+        <a href="#">视频</a>
+        <a href="#">财经</a>
+        <a href="#">凤凰号</a>
+        <a href="#">凤凰卫视</a>
+    </nav>
+    
+    <!-- swiper 轮播图 -->
+    <div class="swiper-wrap">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="https://d.ifengimg.com/w698_h350_q90/x0.ifengimg.com/ucms/2020_51/E106A2404C60072EB39916BB4B3C6455962AA47C_w650_h366.jpg" alt="">
+                    </a>
+                    <div class="swiper-slide-text">
+                        <a href="#">俄罗斯“冰城”气温达-43°C 行人帽子睫毛都结冰</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="https://d.ifengimg.com/w698_h350_q90/x0.ifengimg.com/ucms/2020_51/AB637B5FA33815A65C53E77059170D57575ED17F_w650_h366.jpg" alt="">
+                    </a>
+                    <div class="swiper-slide-text">
+                        <a href="#">俄罗斯“冰城”气温达-43°C 行人帽子睫毛都结冰</a>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <a href="">
+                        <img src="https://d.ifengimg.com/w698_h350_q90/x0.ifengimg.com/ucms/2020_51/83EB962D9F94939E42FD4A62C3E19976A87DC1F9_w650_h366.jpg" alt="">
+                     </a>
+                     <div class="swiper-slide-text">
+                        <a href="#">俄罗斯“冰城”气温达-43°C 行人帽子睫毛都结冰</a>
+                    </div>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+
+    <!-- 主题模块：左图 右文、 三小图、 纯文字 -->
+    <section class="ifeng-sec">
+        <!-- 左图 -->
+        <figure class="pic"><img src="https://d.ifengimg.com/w226_h150_q90_webp/x0.ifengimg.com/ucms/2020_51/1CD5504F750C5DE3038DEAEA1CCABA59914E53E9_size25_w594_h334.jpg" alt=""></figure>
+        <!-- 右文 -->
+        <aside class="txt">
+            <h2>这三年，习近平治国理政思想这三年，习近平治国理政思想</h2>
+            <p>
+                <span class="time">1分钟前</span>
+                <span class="num">
+                    评论数
+                    <i class="icon-font icon-comment"></i>
+                </span>
+            </p>
+        </aside>
+    </section>
+
+    <!-- 动态计算rem的大小 -->
+    <script type="text/javascript">
+        function refreshRem() {
+            var desW = 750,
+                winW = document.documentElement.clientWidth,
+                ratio = winW / desW;
+            document.documentElement.style.fontSize = ratio * 100 + 'px';
+        }
+        refreshRem();
+        window.addEventListener('resize', refreshRem);
+    </script>
+
+    <!-- swiper -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <script>        
+        var mySwiper = new Swiper ('.swiper-container', {
+          direction: 'horizontal', // 垂直切换选项
+          loop: true, // 循环模式选项
+          //自动切换
+          autoplay: {
+            delay: 2000,
+            // stopOnLastSlide: false,
+            disableOnInteraction: false,
+          },
+          // 如果需要分页器
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            // clickable :true,
+            //type : 'custom',
+            
+          },
+        
+          // 如果需要前进后退按钮
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          
+          // 如果需要滚动条
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        })        
+    </script>
+</body>
+</html>
